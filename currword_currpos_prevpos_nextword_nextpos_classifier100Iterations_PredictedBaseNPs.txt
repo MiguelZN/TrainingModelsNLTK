@@ -1,0 +1,206 @@
+USING METHOD:currword_currpos_prevpos_nextword_nextpos
+Was given an already existing classifier! Loading classifier..
+Sentence 1:
+(S
+  (NP Balcor/NNP)
+  ,/,
+  (NP which/WDT)
+  (VP has/VBZ)
+  (NP interests/NNS)
+  (PP in/IN)
+  (NP real/JJ estate/NN)
+  ,/,
+  (VP said/VBD)
+  (NP the/DT position/NN)
+  (VP is/VBZ newly/RB created/VBN)
+  ./.)
+Sentence 2:
+(S
+  (NP The/DT move/NN)
+  (VP followed/VBD)
+  (NP a/DT round/NN)
+  (PP of/IN)
+  (NP similar/JJ increases/NNS)
+  (PP by/IN)
+  (NP other/JJ lenders/NNS)
+  (PP against/IN)
+  (NP Arizona/NNP real/JJ estate/NN loans/NNS)
+  ,/,
+  (VP reflecting/VBG)
+  (NP a/DT continuing/VBG decline/NN)
+  (PP in/IN)
+  (NP that/DT market/NN)
+  ./.)
+Sentence 3:
+(S
+  (NP United/NNP)
+  (VP paid/VBD)
+  (NP him/PRP)
+  (NP a/DT $/$ 375,000/CD bonus/NN)
+  (VP to/TO lure/VB)
+  (NP him/PRP)
+  away/RB
+  (PP from/IN)
+  (NP American/NNP Airlines/NNPS)
+  ,/,
+  and/CC
+  (NP he/PRP)
+  (VP was/VBD paid/VBN)
+  (NP a/DT salary/NN)
+  (PP of/IN)
+  (NP $/$ 342,122/CD)
+  (NP last/JJ year/NN)
+  (PP with/IN)
+  (NP a/DT $/$ 280,000/CD bonus/NN)
+  ./.)
+Sentence 4:
+(S
+  (NP Public/JJ protests/NNS)
+  (PP against/IN)
+  (NP him/PRP)
+  (VP were/VBD triggered/VBN)
+  (PP in/IN)
+  (NP June/NNP 1987/CD)
+  due/JJ
+  (PP to/TO)
+  (NP charges/NNS)
+  (PP by/IN)
+  (NP Diaz/NNP Herrera/NNP)
+  ,/,
+  (NP his/PRP$ former/JJ chief/NN)
+  (PP of/IN)
+  (NP staff/NN)
+  ,/,
+  that/IN
+  (NP Mr./NNP Noriega/NNP)
+  (VP had/VBD stolen/VBN)
+  (NP the/DT 1984/CD election/NN)
+  and/CC
+  (VP had/VBD ordered/VBN)
+  (NP the/DT killing/NN)
+  (PP of/IN)
+  (NP Messrs./NNP Spadafora/NNP)
+  and/CC
+  (NP Torrijos/NNP)
+  ./.)
+Sentence 5:
+(S
+  (NP They/PRP)
+  (VP are/VBP)
+  (PP in/IN)
+  (NP the/DT forefront/NN)
+  (PP of/IN)
+  (VP opposing/VBG)
+  (NP the/DT search/NN)
+  (PP for/IN)
+  (NP new/JJ landfills/NNS and/CC methods/NNS)
+  (PP of/IN)
+  (NP incineration/NN)
+  and/CC
+  (NP even/RB)
+  (VP oppose/VBP)
+  (NP new/JJ methods/NNS)
+  (PP of/IN)
+  (NP research/NN)
+  (PP such/JJ)
+  (PP as/IN)
+  (NP genetic/JJ engineering/NN)
+  ./.)
+Sentence 6:
+(S
+  (NP It/PRP)
+  (VP is/VBZ providing/VBG)
+  (NP $/$ 50/CD million/CD)
+  (PP in/IN)
+  (NP emergency/NN financing/NN)
+  (PP to/TO)
+  (NP the/DT company/NN)
+  and/CC
+  (VP has/VBZ agreed/VBN to/TO buy/VB)
+  (NP as/RB much/JJ)
+  (PP as/IN)
+  (NP $/$ 75/CD million/CD)
+  (PP in/IN)
+  (NP receivables/NNS)
+  (PP from/IN)
+  (NP B./NNP Altman/NNP &/CC Co./NNP)
+  and/CC
+  (NP Bonwit/NNP Teller/NNP)
+  ,/,
+  (NP L.J/NNP)
+  ./.
+  (NP Hooker/NNP)
+  (NP 's/POS two/CD)
+  (VP fully/RB)
+  (NP owned/VBN department-store/NN chains/NNS)
+  ./.)
+Sentence 7:
+(S
+  (NP This/DT summer/NN)
+  ,/,
+  (NP the/DT jamboree/NN)
+  (VP attracted/VBD)
+  (NP more/JJR visitors/NNS)
+  (PP than/IN)
+  (NP the/DT busiest/JJS week/NN)
+  (PP of/IN)
+  (NP the/DT town/NN)
+  (NP 's/POS winter/NN ski/NN season/NN)
+  ./.)
+Sentence 8:
+(S
+  (NP His/PRP$ term/NN)
+  (VP has/VBZ produced/VBN)
+  (NP no/DT spectacular/JJ failures/NNS)
+  (PP in/IN)
+  (NP politics/NNS)
+  ,/,
+  (PP in/IN)
+  (NP the/DT economy/NN)
+  or/CC
+  (PP on/IN)
+  (NP the/DT military/JJ front/NN)
+  ,/,
+  and/CC
+  (VP has/VBZ chalked/VBN)
+  up/RP
+  (NP some/DT successes/NNS)
+  ./.)
+Sentence 9:
+(S
+  (NP The/DT Ginnie/NNP Mae/NNP 9/CD %/NN issue/NN)
+  (VP was/VBD yielding/VBG)
+  (NP 9.43/CD %/NN)
+  (PP to/TO)
+  (NP a/DT 12-year/JJ average/JJ life/NN assumption/NN)
+  ,/,
+  (PP as/IN)
+  (NP the/DT spread/NN)
+  (PP above/IN)
+  (NP the/DT Treasury/NNP 10-year/JJ note/NN)
+  (VP held/VBD)
+  (PP at/IN)
+  (NP 1.42/CD percentage/NN points/NNS)
+  ./.)
+Sentence 10:
+(S
+  (PP By/IN)
+  (NP early/JJ May/NNP)
+  ,/,
+  (NP Moscow/NNP)
+  (VP had/VBD delivered/VBN)
+  ,/,
+  (PP for/IN)
+  (NP example/NN)
+  ,/,
+  (NP 1,000/CD trucks/NNS)
+  ,/,
+  (PP about/IN)
+  (NP 100/CD tanks/NNS)
+  ,/,
+  (NP artillery/NN)
+  and/CC
+  (NP hundreds/NNS)
+  (PP of/IN)
+  (NP other/JJ combat/NN vehicles/NNS)
+  ./.)

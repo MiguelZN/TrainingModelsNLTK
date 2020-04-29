@@ -1,10 +1,16 @@
-import nltk, pickle,os.path
+'''
+Miguel Zavala, Brad Altmiller, Max Luu ,Muhammet Aydin
+CISC489-NLP Topics
+Homework 3
+'''
+
+import nltk, pickle, os.path
 from nltk.corpus import conll2000
 from enum import Enum
 
-#Uncomment to download more nltk datasets:
-#nltk.download()
-#nltk.download('averaged_perceptron_tagger')
+# Uncomment to download more nltk datasets:
+# nltk.download()
+# nltk.download('averaged_perceptron_tagger')
 
 '''
 1)
@@ -23,7 +29,10 @@ annotation  and  where they are in agreement with your annotation.Note: For Cons
 self.classifier  =  nltk.MaxentClassifier.train(train_set,  algorithm='megam',  trace=0), so that the default algorithm is setto IIS.
 
 '''
+CLASSIFIER_SAVE_DIR = "" #Modify to preferred save location for classifier Object
 
+
+# Enumeration type to organize the three model training types
 class POSMODELTYPES(Enum):
     CURRPOS = "CURRPOS".lower()
     CURRWORD_CURRPOS_PREVPOS = "CURRWORD_CURRPOS_PREVPOS".lower()
@@ -35,6 +44,8 @@ class POSMODELTYPES(Enum):
     def __str__(self):
         return self.value
 
+
+# Takes in a list of sentences (strings) and assigns POS tags to each word (required for training)
 def preprocess(listOfSentences):
     listOfPOSTaggedSentences = []
     for sentence in listOfSentences:
@@ -46,23 +57,28 @@ def preprocess(listOfSentences):
     return listOfPOSTaggedSentences
 
 
+# Training Method: a.Using only current pos
 def npchunk_featuresCurrPOS(sentence, i, history):
     word, pos = sentence[i]
     return {"pos": pos}
 
+
+# Training Method: b.Using onlycurrent word, current pos and previous pos
 def npchunk_featuresCurrWordCurrPOSPrevPOS(sentence, i, history):
     word, pos = sentence[i]
-    prevword,prevpos = None, None
+    prevword, prevpos = None, None
 
     if i == 0:
         prevword, prevpos = "<START>", "<START>"
     else:
-        prevword, prevpos = sentence[i-1]
-    return {"pos": pos,"word":word, "prevpos": prevpos}
+        prevword, prevpos = sentence[i - 1]
+    return {"pos": pos, "word": word, "prevpos": prevpos}
 
+
+# Training Method: c.Using only current word, current pos, previous pos and next word pos
 def npchunk_featuresCurrWordCurrPOSPrevPOSNextWordNextPOS(sentence, i, history):
     word, pos = sentence[i]
-    preword,prevpos,nextword,nextpos = None,None,None,None
+    preword, prevpos, nextword, nextpos = None, None, None, None
 
     if i == 0:
         prevword, prevpos = "<START>", "<START>"
@@ -72,15 +88,19 @@ def npchunk_featuresCurrWordCurrPOSPrevPOSNextWordNextPOS(sentence, i, history):
         nextword, nextpos = "<END>", "<END>"
     else:
         nextword, nextpos = sentence[i + 1]
-    return {"pos": pos, "word": word, "prevpos": prevpos,"nextpos":nextpos,"nextword":nextword}
+    return {"pos": pos, "word": word, "prevpos": prevpos, "nextpos": nextpos, "nextword": nextword}
 
 
+# NLTK method for training
 class ConsecutiveNPChunkTagger(nltk.TaggerI):
-    def __init__(self, train_sents,posmodel=POSMODELTYPES.CURRPOS,iterations=1,InputtedClassifier=None):
-        self.POSMODELTYPE = posmodel #Indicates which model to use
+    def __init__(self, train_sents, posmodel=POSMODELTYPES.CURRPOS, iterations=1, InputtedClassifier=None):
+        self.POSMODELTYPE = posmodel  # Indicates which model to use
         train_set = []
 
-        if(InputtedClassifier==None):
+        # Checks if an existing classifier Object was not inputted
+        # If no classifier was given then recreates the classifier Object
+        # (trains using the conll2000 dataset)
+        if (InputtedClassifier == None):
             for tagged_sent in train_sents:
                 untagged_sent = nltk.tag.untag(tagged_sent)
                 history = []
@@ -88,9 +108,9 @@ class ConsecutiveNPChunkTagger(nltk.TaggerI):
                     featureset = None
 
                     # Only uses the current POS:
-                    if(self.POSMODELTYPE==POSMODELTYPES.CURRPOS):
+                    if (self.POSMODELTYPE == POSMODELTYPES.CURRPOS):
                         featureset = npchunk_featuresCurrPOS(untagged_sent, i, history)
-                    elif(self.POSMODELTYPE==POSMODELTYPES.CURRWORD_CURRPOS_PREVPOS):
+                    elif (self.POSMODELTYPE == POSMODELTYPES.CURRWORD_CURRPOS_PREVPOS):
                         featureset = npchunk_featuresCurrWordCurrPOSPrevPOS(untagged_sent, i, history)
                     else:
                         featureset = npchunk_featuresCurrWordCurrPOSPrevPOSNextWordNextPOS(untagged_sent, i, history)
@@ -98,13 +118,12 @@ class ConsecutiveNPChunkTagger(nltk.TaggerI):
                     history.append(tag)
 
             print("FINISHED TRAIN_SET:")
-            #print(train_set)
-            self.classifier = nltk.MaxentClassifier.train(train_set,max_iter=iterations) #, trace = 0
-
+            # print(train_set)
+            self.classifier = nltk.MaxentClassifier.train(train_set, max_iter=iterations)  # , trace = 0
 
             # Saves the classifier using pickle (In order to save time):
             id = 1  # starts at id 1 to check if file exists
-            classifierPickleFile = str(self.POSMODELTYPE.__str__()) + "_classifier" + str(id) + ".pickle"
+            classifierPickleFile = CLASSIFIER_SAVE_DIR+str(self.POSMODELTYPE.__str__()) + "_classifier" + str(id) + ".pickle" #File path for this classifer Object
             print(classifierPickleFile)
             while (True):
                 if (os.path.isfile(classifierPickleFile)):
@@ -114,7 +133,7 @@ class ConsecutiveNPChunkTagger(nltk.TaggerI):
                     classifier_f.close()
 
                     id += 1
-                    classifierPickleFile = str(self.POSMODELTYPE) + "_classifier" + str(
+                    classifierPickleFile = CLASSIFIER_SAVE_DIR+str(self.POSMODELTYPE) + "_classifier" + str(
                         id) + ".pickle"  # Tries a new pickle file name
                 else:
                     # Once it finds an available file path, it saves the classifier
@@ -124,17 +143,18 @@ class ConsecutiveNPChunkTagger(nltk.TaggerI):
                     print(self.classifier)
                     saveClassifier.close()
                     break
+            print("FINISHED CLASSIFIER")
+        # If an existing classifier Object was given (existing training model)
+        # Then simply uses it rather than recreating it
         else:
             print("Was given an already existing classifier! Loading classifier..")
             self.classifier = InputtedClassifier
-        print("FINISHED CLASSIFIER")
-
 
     def tag(self, sentence):
         history = []
         for i, word in enumerate(sentence):
             featureset = None
-            #Only uses the current POS:
+            # Only uses the current POS:
             if (self.POSMODELTYPE == POSMODELTYPES.CURRPOS):
                 featureset = npchunk_featuresCurrPOS(sentence, i, history)
             elif (self.POSMODELTYPE == POSMODELTYPES.CURRWORD_CURRPOS_PREVPOS):
@@ -147,50 +167,80 @@ class ConsecutiveNPChunkTagger(nltk.TaggerI):
 
 
 class ConsecutiveNPChunker(nltk.ChunkParserI):
-    def __init__(self, train_sents,POSMODELTYPE=POSMODELTYPES.CURRPOS,iterations:int=1,InputtedClassifier=None):
+    def __init__(self, train_sents, POSMODELTYPE=POSMODELTYPES.CURRPOS, iterations: int = 1, InputtedClassifier=None):
         tagged_sents = [[((w, t), c) for (w, t, c) in
                          nltk.chunk.tree2conlltags(sent)]
                         for sent in train_sents]
 
-        print("USING METHOD:"+str(POSMODELTYPE))
-        self.tagger = ConsecutiveNPChunkTagger(tagged_sents,POSMODELTYPE,iterations,InputtedClassifier)
-
+        print("USING METHOD:" + str(POSMODELTYPE))
+        self.tagger = ConsecutiveNPChunkTagger(tagged_sents, POSMODELTYPE, iterations, InputtedClassifier)
 
     def parse(self, sentence):
         tagged_sents = self.tagger.tag(sentence)
         conlltags = [(w, t, c) for ((w, t), c) in tagged_sents]
         return nltk.chunk.conlltags2tree(conlltags)
 
-def loadClassifier(classifierpath:str):
+
+# Loads an existing classifier Object by inputting its path
+# Must be a python '.pickle' file
+def loadClassifier(classifierpath: str):
     classifier_f = open(classifierpath, "rb")
     classifier = pickle.load(classifier_f)
     classifier_f.close()
     return classifier
 
+
+# Returns a list of strings representing line by line in a text file
 def getLineByLine(textfile):
-    file = open(textfile,'r')
+    file = open(textfile, 'r')
     listOfLines = []
     for line in file.readlines():
-        #print(line)
+        # print(line)
         listOfLines.append(line.rstrip('\n\r'))
 
     file.close()
     return listOfLines
 
+
+# Returns the Predicted BaseNPs for the given classifier Object, takes in a list of sentences(strs)
+def getBaseNPsGivenChunkerAndTaggedSentences(chunker: nltk.ChunkParserI, taggedsentences: list):
+    baseNPs = {}
+    sentence_id = 1
+    print("Printing Predicted BaseNPs:")
+    for sentence in taggedsentences:
+        baseNPs[sentence_id] = chunker.parse(sentence)
+        print("Sentence " + str(sentence_id) + ":")
+        print(baseNPs[sentence_id])
+
+        sentence_id += 1
+
+    return baseNPs
+
+
+# Main------------------------------------------------------
 print('main')
 
-
-# print(conll2000.chunked_sents('train.txt')[99])
-
-#Gets the training sentences and runs chunker on them to get classifier
+# Gets the training sentences and runs chunker on them to get classifier
 train_sents = conll2000.chunked_sents('train.txt')
 print("Starting Chunker..(wait a few mins)")
-chunker = ConsecutiveNPChunker(train_sents,POSMODELTYPE=POSMODELTYPES.CURRPOS,iterations=100,InputtedClassifier=loadClassifier('currpos_classifier100Iterations.pickle'))
 
-#Extracts line by line sentences of our 'HW3_test.txt'
+# Extracts line by line sentences of our 'HW3_test.txt'
 hw3_sentences = getLineByLine('HW3_test.txt')
 
-#Assigns POS Tags each of the words in each sentence
+# Assigns POS Tags each of the words in each sentence
 listOfPOSTaggedSentences = preprocess(hw3_sentences)
 
-print(chunker.parse(listOfPOSTaggedSentences[0]))
+# Training Method: a.Using only current pos
+chunkerUsingCurrPOS = ConsecutiveNPChunker(train_sents, POSMODELTYPE=POSMODELTYPES.CURRPOS, iterations=100,InputtedClassifier=loadClassifier('currpos_classifier100Iterations.pickle'))
+getBaseNPsGivenChunkerAndTaggedSentences(chunkerUsingCurrPOS, listOfPOSTaggedSentences)
+
+print("-----------------------")
+
+# Training Method: b.Using onlycurrent word, current pos and previous pos
+chunkerUsingCurrWordCurrPOSPrevPOS = ConsecutiveNPChunker(train_sents,POSMODELTYPE=POSMODELTYPES.CURRWORD_CURRPOS_PREVPOS,iterations=100, InputtedClassifier=loadClassifier('currword_currpos_prevpos_classifier100Iterations.pickle'))
+getBaseNPsGivenChunkerAndTaggedSentences(chunkerUsingCurrWordCurrPOSPrevPOS, listOfPOSTaggedSentences)
+
+print("-----------------------")
+# Training Method: c.Using only current word, current pos, previous pos and next word pos
+chunkerUsingCurrWordCurrPOSPrevPOSNextWordNextPOS = ConsecutiveNPChunker(train_sents,POSMODELTYPE=POSMODELTYPES.CURRWORD_CURRPOS_PREVPOS_NEXTWORD_NEXTPOS,iterations=100,InputtedClassifier=loadClassifier('currword_currpos_prevpos_nextword_nextpos_classifier100Iterations.pickle'))
+getBaseNPsGivenChunkerAndTaggedSentences(chunkerUsingCurrWordCurrPOSPrevPOSNextWordNextPOS, listOfPOSTaggedSentences)

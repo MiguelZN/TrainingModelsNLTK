@@ -109,28 +109,4 @@ FINISHED CLASSIFIER
 currpos_classifier1.pickle
 PRINTING CLASSIFIER
 <ConditionalExponentialClassifier: 7 labels, 194 features>
-[('Balcor', 'NNP'), (',', ','), ('which', 'WDT'), ('has', 'VBZ'), ('interests', 'NNS'), ('in', 'IN'), ('real', 'JJ'), ('estate', 'NN'), (',', ','), ('said', 'VBD'), ('the', 'DT'), ('position', 'NN'), ('is', 'VBZ'), ('newly', 'RB'), ('created', 'VBN'), ('.', '.')]
-[('The', 'DT'), ('move', 'NN'), ('followed', 'VBD'), ('a', 'DT'), ('round', 'NN'), ('of', 'IN'), ('similar', 'JJ'), ('increases', 'NNS'), ('by', 'IN'), ('other', 'JJ'), ('lenders', 'NNS'), ('against', 'IN'), ('Arizona', 'NNP'), ('real', 'JJ'), ('estate', 'NN'), ('loans', 'NNS'), (',', ','), ('reflecting', 'VBG'), ('a', 'DT'), ('continuing', 'VBG'), ('decline', 'NN'), ('in', 'IN'), ('that', 'DT'), ('market', 'NN'), ('.', '.')]
-[('United', 'NNP'), ('paid', 'VBD'), ('him', 'PRP'), ('a', 'DT'), ('$', '$'), ('375,000', 'CD'), ('bonus', 'NN'), ('to', 'TO'), ('lure', 'VB'), ('him', 'PRP'), ('away', 'RB'), ('from', 'IN'), ('American', 'NNP'), ('Airlines', 'NNPS'), (',', ','), ('and', 'CC'), ('he', 'PRP'), ('was', 'VBD'), ('paid', 'VBN'), ('a', 'DT'), ('salary', 'NN'), ('of', 'IN'), ('$', '$'), ('342,122', 'CD'), ('last', 'JJ'), ('year', 'NN'), ('with', 'IN'), ('a', 'DT'), ('$', '$'), ('280,000', 'CD'), ('bonus', 'NN'), ('.', '.')]
-[('Public', 'JJ'), ('protests', 'NNS'), ('against', 'IN'), ('him', 'PRP'), ('were', 'VBD'), ('triggered', 'VBN'), ('in', 'IN'), ('June', 'NNP'), ('1987', 'CD'), ('due', 'JJ'), ('to', 'TO'), ('charges', 'NNS'), ('by', 'IN'), ('Diaz', 'NNP'), ('Herrera', 'NNP'), (',', ','), ('his', 'PRP$'), ('former', 'JJ'), ('chief', 'NN'), ('of', 'IN'), ('staff', 'NN'), (',', ','), ('that', 'IN'), ('Mr.', 'NNP'), ('Noriega', 'NNP'), ('had', 'VBD'), ('stolen', 'VBN'), ('the', 'DT'), ('1984', 'CD'), ('election', 'NN'), ('and', 'CC'), ('had', 'VBD'), ('ordered', 'VBN'), ('the', 'DT'), ('killing', 'NN'), ('of', 'IN'), ('Messrs.', 'NNP'), ('Spadafora', 'NNP'), ('and', 'CC'), ('Torrijos', 'NNP'), ('.', '.')]
-[('They', 'PRP'), ('are', 'VBP'), ('in', 'IN'), ('the', 'DT'), ('forefront', 'NN'), ('of', 'IN'), ('opposing', 'VBG'), ('the', 'DT'), ('search', 'NN'), ('for', 'IN'), ('new', 'JJ'), ('landfills', 'NNS'), ('and', 'CC'), ('methods', 'NNS'), ('of', 'IN'), ('incineration', 'NN'), ('and', 'CC'), ('even', 'RB'), ('oppose', 'VBP'), ('new', 'JJ'), ('methods', 'NNS'), ('of', 'IN'), ('research', 'NN'), ('such', 'JJ'), ('as', 'IN'), ('genetic', 'JJ'), ('engineering', 'NN'), ('.', '.')]
-[('It', 'PRP'), ('is', 'VBZ'), ('providing', 'VBG'), ('$', '$'), ('50', 'CD'), ('million', 'CD'), ('in', 'IN'), ('emergency', 'NN'), ('financing', 'NN'), ('to', 'TO'), ('the', 'DT'), ('company', 'NN'), ('and', 'CC'), ('has', 'VBZ'), ('agreed', 'VBN'), ('to', 'TO'), ('buy', 'VB'), ('as', 'RB'), ('much', 'JJ'), ('as', 'IN'), ('$', '$'), ('75', 'CD'), ('million', 'CD'), ('in', 'IN'), ('receivables', 'NNS'), ('from', 'IN'), ('B.', 'NNP'), ('Altman', 'NNP'), ('&', 'CC'), ('Co.', 'NNP'), ('and', 'CC'), ('Bonwit', 'NNP'), ('Teller', 'NNP'), (',', ','), ('L.J', 'NNP'), ('.', '.'), ('Hooker', 'NNP'), ("'s", 'POS'), ('two', 'CD'), ('fully', 'RB'), ('owned', 'VBN'), ('department-store', 'NN'), ('chains', 'NNS'), ('.', '.')]
-[('This', 'DT'), ('summer', 'NN'), (',', ','), ('the', 'DT'), ('jamboree', 'NN'), ('attracted', 'VBD'), ('more', 'JJR'), ('visitors', 'NNS'), ('than', 'IN'), ('the', 'DT'), ('busiest', 'JJS'), ('week', 'NN'), ('of', 'IN'), ('the', 'DT'), ('town', 'NN'), ("'s", 'POS'), ('winter', 'NN'), ('ski', 'NN'), ('season', 'NN'), ('.', '.')]
-[('His', 'PRP$'), ('term', 'NN'), ('has', 'VBZ'), ('produced', 'VBN'), ('no', 'DT'), ('spectacular', 'JJ'), ('failures', 'NNS'), ('in', 'IN'), ('politics', 'NNS'), (',', ','), ('in', 'IN'), ('the', 'DT'), ('economy', 'NN'), ('or', 'CC'), ('on', 'IN'), ('the', 'DT'), ('military', 'JJ'), ('front', 'NN'), (',', ','), ('and', 'CC'), ('has', 'VBZ'), ('chalked', 'VBN'), ('up', 'RP'), ('some', 'DT'), ('successes', 'NNS'), ('.', '.')]
-[('The', 'DT'), ('Ginnie', 'NNP'), ('Mae', 'NNP'), ('9', 'CD'), ('%', 'NN'), ('issue', 'NN'), ('was', 'VBD'), ('yielding', 'VBG'), ('9.43', 'CD'), ('%', 'NN'), ('to', 'TO'), ('a', 'DT'), ('12-year', 'JJ'), ('average', 'JJ'), ('life', 'NN'), ('assumption', 'NN'), (',', ','), ('as', 'IN'), ('the', 'DT'), ('spread', 'NN'), ('above', 'IN'), ('the', 'DT'), ('Treasury', 'NNP'), ('10-year', 'JJ'), ('note', 'NN'), ('held', 'VBD'), ('at', 'IN'), ('1.42', 'CD'), ('percentage', 'NN'), ('points', 'NNS'), ('.', '.')]
-[('By', 'IN'), ('early', 'JJ'), ('May', 'NNP'), (',', ','), ('Moscow', 'NNP'), ('had', 'VBD'), ('delivered', 'VBN'), (',', ','), ('for', 'IN'), ('example', 'NN'), (',', ','), ('1,000', 'CD'), ('trucks', 'NNS'), (',', ','), ('about', 'IN'), ('100', 'CD'), ('tanks', 'NNS'), (',', ','), ('artillery', 'NN'), ('and', 'CC'), ('hundreds', 'NNS'), ('of', 'IN'), ('other', 'JJ'), ('combat', 'NN'), ('vehicles', 'NNS'), ('.', '.')]
-(S
-  (NP Balcor/NNP)
-  ,/,
-  (NP which/WDT)
-  (VP has/VBZ)
-  (NP interests/NNS)
-  (PP in/IN)
-  (NP real/JJ estate/NN)
-  ,/,
-  (VP said/VBD)
-  (NP the/DT position/NN)
-  (VP is/VBZ)
-  newly/RB
-  (VP created/VBN)
-  ./.)
+
