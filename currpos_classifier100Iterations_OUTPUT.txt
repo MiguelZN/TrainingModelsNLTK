@@ -1,0 +1,136 @@
+Starting Chunker..(wait a few mins)
+USING METHOD:currpos
+FINISHED TRAIN_SET:
+  ==> Training (100 iterations)
+
+      Iteration    Log Likelihood    Accuracy
+      ---------------------------------------
+             1          -1.94591        0.181
+             2          -0.52466        0.781
+             3          -0.49125        0.781
+             4          -0.47042        0.781
+             5          -0.45597        0.781
+             6          -0.44525        0.781
+             7          -0.43695        0.781
+             8          -0.43030        0.781
+             9          -0.42485        0.781
+            10          -0.42029        0.781
+            11          -0.41641        0.781
+            12          -0.41308        0.781
+            13          -0.41017        0.781
+            14          -0.40762        0.781
+            15          -0.40536        0.781
+            16          -0.40334        0.781
+            17          -0.40153        0.781
+            18          -0.39989        0.781
+            19          -0.39840        0.781
+            20          -0.39705        0.781
+            21          -0.39581        0.781
+            22          -0.39467        0.781
+            23          -0.39361        0.781
+            24          -0.39264        0.781
+            25          -0.39173        0.781
+            26          -0.39089        0.781
+            27          -0.39011        0.781
+            28          -0.38937        0.781
+            29          -0.38868        0.781
+            30          -0.38803        0.781
+            31          -0.38743        0.781
+            32          -0.38685        0.781
+            33          -0.38631        0.781
+            34          -0.38580        0.781
+            35          -0.38531        0.781
+            36          -0.38485        0.781
+            37          -0.38441        0.781
+            38          -0.38399        0.781
+            39          -0.38360        0.781
+            40          -0.38322        0.781
+            41          -0.38286        0.781
+            42          -0.38251        0.781
+            43          -0.38218        0.781
+            44          -0.38187        0.781
+            45          -0.38156        0.781
+            46          -0.38127        0.781
+            47          -0.38099        0.781
+            48          -0.38073        0.781
+            49          -0.38047        0.781
+            50          -0.38022        0.781
+            51          -0.37998        0.781
+            52          -0.37975        0.781
+            53          -0.37953        0.781
+            54          -0.37931        0.781
+            55          -0.37911        0.781
+            56          -0.37891        0.781
+            57          -0.37871        0.781
+            58          -0.37853        0.781
+            59          -0.37835        0.781
+            60          -0.37817        0.781
+            61          -0.37800        0.781
+            62          -0.37784        0.781
+            63          -0.37768        0.781
+            64          -0.37752        0.781
+            65          -0.37737        0.781
+            66          -0.37722        0.781
+            67          -0.37708        0.781
+            68          -0.37695        0.781
+            69          -0.37681        0.781
+            70          -0.37668        0.781
+            71          -0.37655        0.781
+            72          -0.37643        0.781
+            73          -0.37631        0.781
+            74          -0.37619        0.781
+            75          -0.37608        0.781
+            76          -0.37597        0.781
+            77          -0.37586        0.781
+            78          -0.37575        0.781
+            79          -0.37565        0.781
+            80          -0.37555        0.781
+            81          -0.37545        0.781
+            82          -0.37535        0.781
+            83          -0.37526        0.781
+            84          -0.37517        0.781
+            85          -0.37508        0.781
+            86          -0.37499        0.781
+            87          -0.37491        0.781
+            88          -0.37482        0.781
+            89          -0.37474        0.781
+            90          -0.37466        0.781
+            91          -0.37458        0.781
+            92          -0.37451        0.781
+            93          -0.37443        0.781
+            94          -0.37436        0.781
+            95          -0.37428        0.781
+            96          -0.37421        0.781
+            97          -0.37414        0.781
+            98          -0.37408        0.781
+            99          -0.37401        0.781
+         Final          -0.37394        0.781
+FINISHED CLASSIFIER
+currpos_classifier1.pickle
+PRINTING CLASSIFIER
+<ConditionalExponentialClassifier: 7 labels, 194 features>
+[('Balcor', 'NNP'), (',', ','), ('which', 'WDT'), ('has', 'VBZ'), ('interests', 'NNS'), ('in', 'IN'), ('real', 'JJ'), ('estate', 'NN'), (',', ','), ('said', 'VBD'), ('the', 'DT'), ('position', 'NN'), ('is', 'VBZ'), ('newly', 'RB'), ('created', 'VBN'), ('.', '.')]
+[('The', 'DT'), ('move', 'NN'), ('followed', 'VBD'), ('a', 'DT'), ('round', 'NN'), ('of', 'IN'), ('similar', 'JJ'), ('increases', 'NNS'), ('by', 'IN'), ('other', 'JJ'), ('lenders', 'NNS'), ('against', 'IN'), ('Arizona', 'NNP'), ('real', 'JJ'), ('estate', 'NN'), ('loans', 'NNS'), (',', ','), ('reflecting', 'VBG'), ('a', 'DT'), ('continuing', 'VBG'), ('decline', 'NN'), ('in', 'IN'), ('that', 'DT'), ('market', 'NN'), ('.', '.')]
+[('United', 'NNP'), ('paid', 'VBD'), ('him', 'PRP'), ('a', 'DT'), ('$', '$'), ('375,000', 'CD'), ('bonus', 'NN'), ('to', 'TO'), ('lure', 'VB'), ('him', 'PRP'), ('away', 'RB'), ('from', 'IN'), ('American', 'NNP'), ('Airlines', 'NNPS'), (',', ','), ('and', 'CC'), ('he', 'PRP'), ('was', 'VBD'), ('paid', 'VBN'), ('a', 'DT'), ('salary', 'NN'), ('of', 'IN'), ('$', '$'), ('342,122', 'CD'), ('last', 'JJ'), ('year', 'NN'), ('with', 'IN'), ('a', 'DT'), ('$', '$'), ('280,000', 'CD'), ('bonus', 'NN'), ('.', '.')]
+[('Public', 'JJ'), ('protests', 'NNS'), ('against', 'IN'), ('him', 'PRP'), ('were', 'VBD'), ('triggered', 'VBN'), ('in', 'IN'), ('June', 'NNP'), ('1987', 'CD'), ('due', 'JJ'), ('to', 'TO'), ('charges', 'NNS'), ('by', 'IN'), ('Diaz', 'NNP'), ('Herrera', 'NNP'), (',', ','), ('his', 'PRP$'), ('former', 'JJ'), ('chief', 'NN'), ('of', 'IN'), ('staff', 'NN'), (',', ','), ('that', 'IN'), ('Mr.', 'NNP'), ('Noriega', 'NNP'), ('had', 'VBD'), ('stolen', 'VBN'), ('the', 'DT'), ('1984', 'CD'), ('election', 'NN'), ('and', 'CC'), ('had', 'VBD'), ('ordered', 'VBN'), ('the', 'DT'), ('killing', 'NN'), ('of', 'IN'), ('Messrs.', 'NNP'), ('Spadafora', 'NNP'), ('and', 'CC'), ('Torrijos', 'NNP'), ('.', '.')]
+[('They', 'PRP'), ('are', 'VBP'), ('in', 'IN'), ('the', 'DT'), ('forefront', 'NN'), ('of', 'IN'), ('opposing', 'VBG'), ('the', 'DT'), ('search', 'NN'), ('for', 'IN'), ('new', 'JJ'), ('landfills', 'NNS'), ('and', 'CC'), ('methods', 'NNS'), ('of', 'IN'), ('incineration', 'NN'), ('and', 'CC'), ('even', 'RB'), ('oppose', 'VBP'), ('new', 'JJ'), ('methods', 'NNS'), ('of', 'IN'), ('research', 'NN'), ('such', 'JJ'), ('as', 'IN'), ('genetic', 'JJ'), ('engineering', 'NN'), ('.', '.')]
+[('It', 'PRP'), ('is', 'VBZ'), ('providing', 'VBG'), ('$', '$'), ('50', 'CD'), ('million', 'CD'), ('in', 'IN'), ('emergency', 'NN'), ('financing', 'NN'), ('to', 'TO'), ('the', 'DT'), ('company', 'NN'), ('and', 'CC'), ('has', 'VBZ'), ('agreed', 'VBN'), ('to', 'TO'), ('buy', 'VB'), ('as', 'RB'), ('much', 'JJ'), ('as', 'IN'), ('$', '$'), ('75', 'CD'), ('million', 'CD'), ('in', 'IN'), ('receivables', 'NNS'), ('from', 'IN'), ('B.', 'NNP'), ('Altman', 'NNP'), ('&', 'CC'), ('Co.', 'NNP'), ('and', 'CC'), ('Bonwit', 'NNP'), ('Teller', 'NNP'), (',', ','), ('L.J', 'NNP'), ('.', '.'), ('Hooker', 'NNP'), ("'s", 'POS'), ('two', 'CD'), ('fully', 'RB'), ('owned', 'VBN'), ('department-store', 'NN'), ('chains', 'NNS'), ('.', '.')]
+[('This', 'DT'), ('summer', 'NN'), (',', ','), ('the', 'DT'), ('jamboree', 'NN'), ('attracted', 'VBD'), ('more', 'JJR'), ('visitors', 'NNS'), ('than', 'IN'), ('the', 'DT'), ('busiest', 'JJS'), ('week', 'NN'), ('of', 'IN'), ('the', 'DT'), ('town', 'NN'), ("'s", 'POS'), ('winter', 'NN'), ('ski', 'NN'), ('season', 'NN'), ('.', '.')]
+[('His', 'PRP$'), ('term', 'NN'), ('has', 'VBZ'), ('produced', 'VBN'), ('no', 'DT'), ('spectacular', 'JJ'), ('failures', 'NNS'), ('in', 'IN'), ('politics', 'NNS'), (',', ','), ('in', 'IN'), ('the', 'DT'), ('economy', 'NN'), ('or', 'CC'), ('on', 'IN'), ('the', 'DT'), ('military', 'JJ'), ('front', 'NN'), (',', ','), ('and', 'CC'), ('has', 'VBZ'), ('chalked', 'VBN'), ('up', 'RP'), ('some', 'DT'), ('successes', 'NNS'), ('.', '.')]
+[('The', 'DT'), ('Ginnie', 'NNP'), ('Mae', 'NNP'), ('9', 'CD'), ('%', 'NN'), ('issue', 'NN'), ('was', 'VBD'), ('yielding', 'VBG'), ('9.43', 'CD'), ('%', 'NN'), ('to', 'TO'), ('a', 'DT'), ('12-year', 'JJ'), ('average', 'JJ'), ('life', 'NN'), ('assumption', 'NN'), (',', ','), ('as', 'IN'), ('the', 'DT'), ('spread', 'NN'), ('above', 'IN'), ('the', 'DT'), ('Treasury', 'NNP'), ('10-year', 'JJ'), ('note', 'NN'), ('held', 'VBD'), ('at', 'IN'), ('1.42', 'CD'), ('percentage', 'NN'), ('points', 'NNS'), ('.', '.')]
+[('By', 'IN'), ('early', 'JJ'), ('May', 'NNP'), (',', ','), ('Moscow', 'NNP'), ('had', 'VBD'), ('delivered', 'VBN'), (',', ','), ('for', 'IN'), ('example', 'NN'), (',', ','), ('1,000', 'CD'), ('trucks', 'NNS'), (',', ','), ('about', 'IN'), ('100', 'CD'), ('tanks', 'NNS'), (',', ','), ('artillery', 'NN'), ('and', 'CC'), ('hundreds', 'NNS'), ('of', 'IN'), ('other', 'JJ'), ('combat', 'NN'), ('vehicles', 'NNS'), ('.', '.')]
+(S
+  (NP Balcor/NNP)
+  ,/,
+  (NP which/WDT)
+  (VP has/VBZ)
+  (NP interests/NNS)
+  (PP in/IN)
+  (NP real/JJ estate/NN)
+  ,/,
+  (VP said/VBD)
+  (NP the/DT position/NN)
+  (VP is/VBZ)
+  newly/RB
+  (VP created/VBN)
+  ./.)
