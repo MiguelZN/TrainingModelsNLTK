@@ -231,16 +231,16 @@ hw3_sentences = getLineByLine('HW3_test.txt')
 listOfPOSTaggedSentences = preprocess(hw3_sentences)
 
 # Training Method: a.Using only current pos
-chunkerUsingCurrPOS = ConsecutiveNPChunker(train_sents, POSMODELTYPE=POSMODELTYPES.CURRPOS, iterations=100,InputtedClassifier=loadClassifier('currpos_classifier100Iterations.pickle'))
+chunkerUsingCurrPOS = ConsecutiveNPChunker(train_sents, POSMODELTYPE=POSMODELTYPES.CURRPOS, iterations=1,InputtedClassifier=None)
 getBaseNPsGivenChunkerAndTaggedSentences(chunkerUsingCurrPOS, listOfPOSTaggedSentences)
 
 print("-----------------------")
 
-# Training Method: b.Using onlycurrent word, current pos and previous pos
-chunkerUsingCurrWordCurrPOSPrevPOS = ConsecutiveNPChunker(train_sents,POSMODELTYPE=POSMODELTYPES.CURRWORD_CURRPOS_PREVPOS,iterations=100, InputtedClassifier=loadClassifier('currword_currpos_prevpos_classifier100Iterations.pickle'))
-getBaseNPsGivenChunkerAndTaggedSentences(chunkerUsingCurrWordCurrPOSPrevPOS, listOfPOSTaggedSentences)
+# Training Method: b.Using only current word, current pos and previous pos
+#chunkerUsingCurrWordCurrPOSPrevPOS = ConsecutiveNPChunker(train_sents,POSMODELTYPE=POSMODELTYPES.CURRWORD_CURRPOS_PREVPOS,iterations=100, InputtedClassifier=loadClassifier('currword_currpos_prevpos_classifier100Iterations.pickle'))
+#getBaseNPsGivenChunkerAndTaggedSentences(chunkerUsingCurrWordCurrPOSPrevPOS, listOfPOSTaggedSentences)
 
 print("-----------------------")
 # Training Method: c.Using only current word, current pos, previous pos and next word pos
-chunkerUsingCurrWordCurrPOSPrevPOSNextWordNextPOS = ConsecutiveNPChunker(train_sents,POSMODELTYPE=POSMODELTYPES.CURRWORD_CURRPOS_PREVPOS_NEXTWORD_NEXTPOS,iterations=100,InputtedClassifier=loadClassifier('currword_currpos_prevpos_nextword_nextpos_classifier100Iterations.pickle'))
-getBaseNPsGivenChunkerAndTaggedSentences(chunkerUsingCurrWordCurrPOSPrevPOSNextWordNextPOS, listOfPOSTaggedSentences)
+#chunkerUsingCurrWordCurrPOSPrevPOSNextWordNextPOS = ConsecutiveNPChunker(train_sents,POSMODELTYPE=POSMODELTYPES.CURRWORD_CURRPOS_PREVPOS_NEXTWORD_NEXTPOS,iterations=100,InputtedClassifier=loadClassifier('currword_currpos_prevpos_nextword_nextpos_classifier100Iterations.pickle'))
+#getBaseNPsGivenChunkerAndTaggedSentences(chunkerUsingCurrWordCurrPOSPrevPOSNextWordNextPOS, listOfPOSTaggedSentences)
