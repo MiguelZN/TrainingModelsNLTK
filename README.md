@@ -5,6 +5,7 @@ Shanker
 **Group**: Muhammet Aydin, Max Luu, Brad Altmiller, Miguel Zavala
 
 **Question 1 Instructions:**
+&nbsp;
 Notes:
 - All question 1 code is contained in **Main.py**
 - The three trained models were trained for 100 iterations and then saved using pickle as: 
@@ -48,8 +49,8 @@ This newly created trained model can then be loaded for future use
 
 **Loading existing trained models:**
 - Set ConsecutiveNPChunker's parameter:
-**InputtedClassifier = loadClassifier('<classifierpicklefilepath>')**
-EX: InputtedClassifier = loadClassifier('currpos_classifier1.pickle')
+**InputtedClassifier = loadClassifier('classifierpicklefilepath')**
+- EX: InputtedClassifier = loadClassifier('currpos_classifier1.pickle')
 
 **Question 2 Instructions:**
 
